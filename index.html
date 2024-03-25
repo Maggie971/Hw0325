@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h2>Registration Form</h2>
+    <form id="registration-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required minlength="3">
+        <div id="name-error" class="error-message"></div>
+
+        <label for="birth-year">Year of Birth:</label>
+        <input type="number" id="birth-year" name="birth-year" required min="1901" max="2099">
+        <div id="birth-year-error" class="error-message"></div>
+
+        <label><input type="checkbox" id="us-resident" name="us-resident"> Do you live in the United States?</label>
+
+        <div id="zipcode-container">
+            <label for="zipcode">Zipcode:</label>
+            <input type="number" id="zipcode" name="zipcode">
+            <div id="zipcode-error" class="error-message"></div>
+        </div>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="8">
+        <div id="password-error" class="error-message"></div>
+
+        <label for="pizza">Preferred type of pizza:</label>
+        <select id="pizza" name="pizza" required>
+            <option value="">Select</option>
+            <option value="pineapple">With pineapple</option>
+            <option value="no-pineapple">Without pineapple</option>
+            <option value="no-pizza">I do not like pizza</option>
+        </select>
+        <div id="pizza-error" class="error-message"></div>
+
+        <button type="submit">Submit</button>
+    </form>
+    <div id="success-message" class="success-message" style="display: none;">Accepted</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
